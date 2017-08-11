@@ -3,15 +3,19 @@
 Steps to follow:
 Make sure you have mongodb installed
 
-Make sure to have a C:\data directory
+Make sure to have a C:\data directory before running mongodb
 
-run npm install
+then run on a fresh terminal:
+mongodb
 
-change the config.js to change the name of the database you want, and the secret you want to use.
+go to NodeRestAPI's main directory and run:
+npm install
+node index.js
+
+Notes:
+change the config.js in the config directory to change the name of the database you want, and the secret you want to use.
 
 use CURL to test endpoints:
-
-make sure to have an instance of mongodb running before you run node index.js in the main directory
 
 POST:
 
