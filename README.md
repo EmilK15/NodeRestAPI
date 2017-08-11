@@ -9,7 +9,9 @@ then run on a fresh terminal:
 mongodb
 
 go to NodeRestAPI's main directory and run:
+
 npm install
+
 node index.js
 
 Notes:
@@ -33,3 +35,9 @@ curl -X GET -d "data1=example1&data2=example2" localhost:3000/api/user/{username
 PUT:
 
 curl -X PUT -d "data1=newEx&data2=newEx" localhost:3000/api/user/{username}
+
+
+To build on this:
+
+A typical restAPI won't return a password and other sensitive information!!
+So a next step is to only return information that you want users to see.
