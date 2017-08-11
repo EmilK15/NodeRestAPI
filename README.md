@@ -11,6 +11,8 @@ change the config.js to change the name of the database you want, and the secret
 
 use CURL to test endpoints:
 
+make sure to have an instance of mongodb running before you run node index.js in the main directory
+
 POST:
 
 curl -X POST -d "data1=example1&data2=example2" localhost:3000/api/user/{yourVariable here}
