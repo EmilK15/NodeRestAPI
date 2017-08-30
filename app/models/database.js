@@ -5,8 +5,9 @@ var bluebird = require('bluebird');
 var Mongoose = bluebird.promisifyAll(require('mongoose'));
 Mongoose.Promise = require('bluebird');
 
-Mongoose.connectAsync(config.database)
-	.catch(function(err){
+Mongoose.connectAsync(config.database, {
+	useMongoClient: true,
+	}).catch(function(err){
 		console.log(err);
 });
 

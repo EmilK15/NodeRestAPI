@@ -10,8 +10,17 @@ var mongoose = require('mongoose'),
 					message: 'could not list users',
 					err: err
 				});
-			else
-				res.json(users);
+			else {
+				var userMap = [];
+				users.forEach(function(user) {
+					let aUser = {
+						username: user.username,
+						email: user.email
+					}
+					userMap.push(aUser);
+				});
+				res.json(userMap);
+			}
 		});
 	};
 
@@ -25,7 +34,10 @@ var mongoose = require('mongoose'),
 					err: err
 				});
 			else
-				res.json(user);
+				res.json({
+					username: user.username,
+					email: user.email
+				});
 		});
 	};
 
@@ -37,7 +49,10 @@ var mongoose = require('mongoose'),
 					err: err
 				});
 			else
-				res.json(user);
+				res.json({
+					username: user.username,
+					email: user.email
+				});
 		});
 	};
 
@@ -50,7 +65,10 @@ var mongoose = require('mongoose'),
 						err: err
 					});
 				else
-					res.json(user);
+					res.json({
+						username: user.username,
+						email: user.email
+				});
 			});
 	};
 

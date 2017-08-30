@@ -13,7 +13,10 @@ var mongoose = require('mongoose'),
 					err: err
 				});
 			else
-				res.json(admin);
+				res.json({
+					username: admin.username,
+					email: admin.email
+				});
 		});
 	};
 
@@ -25,7 +28,10 @@ var mongoose = require('mongoose'),
 					err: err
 				});
 			else
-				res.json(admin)
+				res.json({
+					username: admin.username,
+					email: admin.email
+				});
 		});
 	};
 
@@ -38,7 +44,10 @@ var mongoose = require('mongoose'),
 						err: err
 					});
 				else
-					res.json(admin);
+					res.json({
+						username: admin.username,
+						email: admin.email
+					});
 			});
 	};
 
